@@ -1,0 +1,26 @@
+---
+title: Development
+---
+
+{% extends "./layouts/base.html" %}
+
+{% from "./macros/contact-trigger-tag.html" import contactTriggerTag %}
+{% from "./macros/contact-form.html" import contactForm %}
+
+<title>{% block title %}{{ title }}{% endblock %}</title>
+
+{% block content %}
+<article class="article">
+	<div class="article__inner">
+		<div class="article__header">
+			<h1 class="article__title">{{ title }}</h1>
+		</div>
+		<div class="article__content">
+			<p>We are at the forefront of Frontend Engineering and willing to take it further for the betterment of our clients and users. We love to tackle the most intricate and challenging frontend engineering problems. Solve them strategically and elegantly, while maintaining codebase simple for the next developer.</p>
+			<p>We’ve helped clients achieve over 20 times speed increase in reaching the first meaningful rendering of their web apps. Loading fast and consistent on mobile devices over low bandwidth, thus enhancing the user experiences of their customers. We’ve helped e-Commerce companies intake multiple fold increase in their conversion with our frontend engineering.</p>
+			<p>If you’re looking for the most advanced, want to squeeze the best out of JavaScript, looking to build the most performant progressive web app, even perhaps to prototype a new technology, we would love to hear from you.</p>
+		</div>
+	</div>
+</article>
+{{ contactForm(pageIdentifier=title, title='Let’s Discuss', newsletterSignupUrl=site.newsletterSignupUrl) }}
+{% endblock %}

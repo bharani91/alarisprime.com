@@ -1,0 +1,26 @@
+---
+title: Product Design
+---
+
+{% extends "./layouts/base.html" %}
+
+{% from "./macros/contact-trigger-tag.html" import contactTriggerTag %}
+{% from "./macros/contact-form.html" import contactForm %}
+
+<title>{% block title %}{{ title }}{% endblock %}</title>
+
+{% block content %}
+<article class="article">
+	<div class="article__inner">
+		<div class="article__header">
+			<h1 class="article__title">{{ title }}</h1>
+		</div>
+		<div class="article__content">
+			- user research, discovery
+			- product conceptualisation
+			- interaction and interface design
+		</div>
+	</div>
+</article>
+{{ contactForm(pageIdentifier=title, title='Let’s Discuss', newsletterSignupUrl=site.newsletterSignupUrl) }}
+{% endblock %}
