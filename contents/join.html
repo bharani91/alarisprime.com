@@ -1,0 +1,24 @@
+---
+title: Contact
+---
+
+{% extends "./layouts/base.html" %}
+
+{% from "./macros/contact-trigger-tag.html" import contactTriggerTag %}
+{% from "./macros/contact-form.html" import contactForm %}
+
+{% block content %}
+<article class="article">
+	<div class="article__inner">
+		<div class="article__header">
+			<h1 class="article__title">Join Us</h1>
+		</div>
+		<div class="article__content">
+			<!-- Add content here -->
+		</div>
+	</div>
+</article>
+
+{{ contactForm(pageIdentifier=title, newsletterSignupUrl=site.newsletterSignupUrl) }}
+
+{% endblock %}
